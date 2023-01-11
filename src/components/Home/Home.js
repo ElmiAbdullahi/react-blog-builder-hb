@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import React from 'react';
 
 import Preview from '../Preview/Preview';
 import Editor from '../Editor/Editor';
@@ -10,7 +11,7 @@ export default function Home() {
   const [title, setTitle] = useState('');
 
   return (
-    <main>
+    <main className="main">
       {/* pass the state variables as props to the presentational components */}
       <Preview title={title} />
       <Editor setTitle={setTitle} title={title} />
