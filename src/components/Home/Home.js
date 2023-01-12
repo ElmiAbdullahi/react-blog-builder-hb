@@ -12,11 +12,12 @@ export default function Home() {
   const [subtitle, setSubtitle] = useState('');
   const [font, setFont] = useState("Architect's Daughter");
   const [align, setAlign] = useState('left');
+  const [text, setText] = useState('');
 
   return (
     <main className="main">
       {/* pass the state variables as props to the presentational components */}
-      <Preview title={title} subtitle={subtitle} font={font} align={align} />
+      <Preview title={title} subtitle={subtitle} font={font} align={align} text={text} />
       <Editor
         setTitle={setTitle}
         setSubtitle={setSubtitle}
@@ -26,6 +27,8 @@ export default function Home() {
         setFont={setFont}
         align={align}
         setAlign={setAlign}
+        text={text}
+        setText={setText}
       />
     </main>
   );
